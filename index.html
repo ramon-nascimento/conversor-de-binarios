@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Conversor de Números Binários</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main id="main">
+      <!-- CABEÇALHO DO CONTEÚDO -->
+      <header class="main__title title">
+        <h1>Conversor</h1>
+
+        <label class="c-dark-mode">
+          <input type="checkbox" id="dark-mode" />
+          <span></span>
+          <text><i class="fa-solid fa-moon"></i></text>
+          <text><i class="fa-solid fa-sun"></i></text>
+        </label>
+
+        <div class="main__title-subtitle sub-title">
+          <h3>
+            Converta <strong>binário</strong> para <strong>decimal</strong> e
+            vice-versa!
+          </h3>
+        </div>
+      </header>
+
+      <!-- CORPO DO CONTEÚDO -->
+      <section class="main__body">
+        <!-- CAMPO DE SELEÇÃO -->
+        <label id="label">
+          <div class="label__title title">
+            <span>Selecione o tipo de operação que deseja</span>
+          </div>
+
+          <div class="label__body">
+            <select id="select">
+              <option value="" selected>Selecione</option>
+              <option value="binarioParaDecimal">Binário -> Decimal</option>
+              <option value="decimalParaBinario">Decimal -> Binário</option>
+            </select>
+          </div>
+        </label>
+
+        <!-- CAMPO DE INSERÇÃO -->
+        <input
+          class="form-control"
+          type="text"
+          placeholder="Insira o valor"
+          required
+        />
+
+        <button class="btn title">Converter</button>
+
+        <!-- CAMPO DE RESULTADO -->
+        <label id="label">
+          <div class="label__title title">
+            <span class="result"> Seu resultado aparecerá aqui! </span>
+          </div>
+        </label>
+      </section>
+    </main>
+
+    <!-- COMPONENTE COPY -->
+    <div class="c-copy">
+      <div class="p" style="color: var(--text-color)">
+        Todos os direitos reservados a
+        <a href="https://www.github.com/ramon-nascimento" target="_blank"
+          >&copy;Ramon</a
+        >
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

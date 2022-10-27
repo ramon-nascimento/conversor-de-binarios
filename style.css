@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+/* NORMALIZE CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* VARIÁVEIS CSS */
+:root {
+  --body-color: 18, 18, 20;
+  --body-color-alt: 32, 32, 36;
+
+  --primary-color: 130, 87, 229;
+
+  --title-color: rgb(225, 225, 230);
+  --text-color: rgb(210, 210, 220);
+}
+
+/* TEMA CLARO */
+.white-theme:root {
+  --body-color: 241, 240, 243;
+  --body-color-alt: 220, 220, 223;
+
+  --title-color: rgb(18, 18, 20);
+  --text-color: rgb(32, 32, 36);
+}
+
+/* ESTILOS PADRONIZADOS */
+body {
+  background: rgb(var(--body-color));
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+strong {
+  color: rgb(var(--primary-color));
+}
+
+a {
+  color: rgb(var(--primary-color));
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#select {
+  padding: 1rem;
+
+  width: 350px;
+
+  border: none;
+  border-radius: 0.4rem;
+
+  color: var(--title-color);
+
+  background: rgb(var(--body-color));
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.title {
+  color: var(--title-color);
+}
+
+.sub-title {
+  color: var(--text-color);
+}
+
+.btn {
+  display: block;
+  width: 100%;
+
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+
+  background: rgba(var(--primary-color));
+
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  color: rgb(210, 210, 220);
+  font-weight: bold;
+
+  cursor: pointer;
+
+  border: none;
+  border-radius: 0.2rem;
+}
+
+select:active,
+select:focus,
+input:active,
+input:focus {
+  outline: 0;
+}
+
+/* CONTEÚDO PRINCIPAL */
+#main {
+  display: flex;
+  flex-direction: column;
+  margin: 10vw auto 2rem auto;
+
+  text-align: center;
+  justify-content: center;
+
+  background: rgb(var(--body-color-alt));
+
+  max-width: 400px;
+  padding: 1rem;
+  border-radius: 0.4rem;
+
+  transition: all 0.2s ease;
+}
+
+/* CABEÇALHO DO CONTEÚDO PRINCIPAL */
+.main__title {
+  position: relative;
+  border-bottom: 2px solid var(--title-color);
+}
+
+.main__title .main__title-subtitle {
+  padding-bottom: 0.5rem;
+}
+
+.c-dark-mode {
+  position: absolute;
+  top: -60px;
+  right: 20px;
+
+  width: 40px;
+  height: 15px;
+
+  background: var(--title-color);
+  box-shadow: 0 0 0 1px var(--title-color);
+
+  border-radius: 75px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+
+  transition: 0.5s;
+}
+
+.c-dark-mode:has(input:checked) {
+  background: rgb(32, 32, 36);
+}
+
+.c-dark-mode input {
+  appearance: none;
+}
+
+.c-dark-mode span {
+  position: absolute;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgba(var(--primary-color));
+  transition: 0.5s;
+}
+
+.c-dark-mode input:checked ~ span {
+  left: 25px;
+  background-color: rgb(var(--primary-color));
+}
+
+.c-dark-mode text {
+  position: absolute;
+  left: -30px;
+  font-size: 0.8em;
+  color: var(--title-color);
+  transition: 0.5s;
+}
+
+.c-dark-mode input:checked ~ text {
+  color: rgb(var(--primary-color));
+}
+
+.c-dark-mode text:last-child {
+  left: initial;
+  right: -35px;
+  color: rgb(var(--primary-color));
+}
+
+.c-dark-mode input:checked ~ text:last-child {
+  color: rgb(var(--title-color));
+}
+
+/* CORPO DO CONTEÚDO PRINCIPAL */
+.main__body {
+  padding: 0.5rem;
+  width: auto;
+}
+
+.form-control {
+  display: block;
+
+  width: 100%;
+
+  padding: 0.8rem;
+  margin: 1rem 0;
+
+  background-color: rgb(var(--body-color));
+
+  font-size: 1em;
+  color: var(--text-color);
+
+  border: none;
+  border-radius: 0.2rem;
+
+  transition: all 0.2s ease;
+}
+
+.result {
+  letter-spacing: .1rem;
+}
+
+/* COMPONENTE COPY */
+.c-copy {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 414px) {
+  #main {
+    margin: 0 15px;
+    margin-top: 20vw;
+  }
+
+  #select {
+    width: 300px;
+  }
+}
