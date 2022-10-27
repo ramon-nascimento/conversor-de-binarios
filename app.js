@@ -14,7 +14,7 @@ const Conversor = {
     if (!regEx.test(bin)) return "Valor não binário informado.";
 
     for (let i = 0; i < bin.length; i++)
-      resultado += binInverso[i] * potencia(2, i);
+      resultado += binInverso[i] * Math.pow(2, i);
 
     return resultado;
   },
@@ -24,16 +24,6 @@ const Conversor = {
 
     return (dec >>> 0).toString(2);
   },
-};
-
-const potencia = (base, expoente) => {
-  let resultado = 1;
-
-  for (let i = 1; i <= expoente; i++) {
-    resultado *= base;
-  }
-
-  return resultado;
 };
 
 const inverter = (valor) => {
